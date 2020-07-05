@@ -7,7 +7,8 @@ http/https_open?:
 	-wfuzz -c -w /root/xPayloads/SecLists/Discovery/Web-Content/common.txt --hc 404,403 -u "http://example.com/FUZZ.txt" -t 100
 	-python3 ./dirsearch.py -u http://example.com -e *
 	-cewl -w wordlists.txt -d 10 -m 1 http://example.com/
-
+found potential user/cred?
+	-try user enum on login or register
 smb_open?:
 	-smbclient -L //10.10.10.191
 ```
